@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://klauncher.ru/front-script/css/style.css">
+      <link rel="stylesheet" href="https://klauncher.ru/front-script/css/slider.css">
+      <link rel="stylesheet" href="https://klauncher.ru/front-script/css/media.css">
+      <link rel="shortcut icon" href="https://klauncher.ru/favicon.ico" type="image/x-icon">
+      <meta charset="utf-8">
+      <script type="text/javascript" defer="">
+         let paths = window.preloadJavaScriptPaths || [],
+            body = document.querySelector('body'),
+            element;
+         paths.forEach(path => {
+            element = document.createElement('link');
+            element.setAttribute('rel', 'preload');
+            element.setAttribute('as', 'script');
+            element.setAttribute('crossorigin', 'anonymous');
+            element.setAttribute('href', path);
+            body.appendChild(element);
+         });
+      </script>
+      <script src="https://kit.fontawesome.com/db9ddec30f.js" crossorigin="anonymous" type="text/javascript"></script>
+      <script type="text/javascript">
+         document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+               initHren();
+            }, 3500)
+         });
+
+         window.addEventListener('scroll', initHren);
+         document.addEventListener('click', initHren);
+         window.addEventListener('touchstart', initHren);
+
+         window.dataLayer = window.dataLayer || [];
+
+         function gtag() {
+            dataLayer.push(arguments);
+         }
+
+         var hrenInit = false;
+
+         function initHren() {
+            if (hrenInit) return;
+            hrenInit = true;
+
+
+
+
+            //googl ads
+            var element = document.createElement("script");
+            element.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+            document.body.appendChild(element);
+            (adsbygoogle = window.adsbygoogle || []).push({});
+
+            //google analytics
+            var element = document.createElement("script");
+            element.src = "https://www.googletagmanager.com/gtag/js?id=AW-452413485";
+            document.body.appendChild(element);
+
+            gtag('js', new Date());
+            gtag('config', 'G-2J9MMX5KX7');
+
+            //ym
+            (function(m, e, t, r, i, k, a) {
+               m[i] = m[i] || function() {
+                  (m[i].a = m[i].a || []).push(arguments)
+               };
+               m[i].l = 1 * new Date();
+               k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = false, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(67082443, "init", {
+               clickmap: true,
+               trackLinks: true,
+               accurateTrackBounce: true
+            });
+
+            //vk retrget
+            var t = document.createElement("script");
+            t.type = "text/javascript", t.async = false, t.src = "https://vk.com/js/api/openapi.js?168", t.onload = function() {
+               VK.Retargeting.Init("VK-RTRG-523508-75weN"), VK.Retargeting.Hit()
+            }, document.head.appendChild(t)
+
+            console.log("HREN initialized");
+         }
+      </script>
+      <script type="text/javascript">
+
+      </script>
+      <noscript>
+         <div>
+            <img src="https://mc.yandex.ru/watch/67082443" style="position:absolute; left:-9999px;" alt="" />
+         </div>
+      </noscript>
+      <title>KLauncher — Скачать лаунчер Майнкрафт</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+      <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-523508-75weN" style="position:fixed; left:-999px;" alt="" /></noscript>
+   </head>
+   <body>
+      <div id="info-modal" class="modal">
+         <span class="close">×</span>
+         <div class="mod-f">
+            <div class="modal-content">
+               <span id="info-title"></span>
+               <div id="info-content"></div>
+            </div>
+         </div>
+      </div>
+
+      <div id="download-ready-modal" class="modal">
+         <span class="close">×</span>
+         <div class="dl-ready"></div>
+         <div class="mod-f">
+         <div class="modal-content">
+            <span class="dl-ready-span" rel="nofollow">
+               После загрузки кликните два раза на файл для установки лаунчера<br>
+               <span class="dl-ready-span-undertext" style="font-size: 15px;"></span>
+               <div class="dl-ready-av-safe">
+                  <img src="/front-script/img/shield.png">
+                  <span rel="nofollow">Файл безопасен для запуска</span>
+               </div>
+            </span>
+         </div>
+         </div>
+      </div>
+
+      <div id="login-modal" class="modal">
+         <span class="close">×</span>
+            <div class="mod-f">
+               <div class="modal-content">
+                  <span>Авторизация</span>
+                  <span id="errorMessage" style="visibility: hidden; color: red; font-size: 12px; margin-bottom: 0"></span>
+                  <input type="text" id="llogin" placeholder="Введите логин или E-mail">
+                  <input type="password" id="password" placeholder="Введите пароль">
+                  <img class="show-password-btn" onclick="if (!window.__cfRLUnblockHandlers) return false; togglePassVisibility(this, '#password');" src="/front-script/img/eyez.png" data-id="password">
+                  <button id="loginBtn">Войти</button>
+                  <p><a href="#" class="password-reset" rel="nofollow">Забыли пароль?</a></p>
+                  <p><a href="#" class="register-button" rel="nofollow">Нет аккаунта? - <span>Зарегистрируйтесь</span></a></p>
+               </div>
+         </div>
+      </div>
+      <div id="forgot-password" class="modal">
+         <span class="close">×</span>
+         <div class="mod-f">
+            <div class="modal-content">
+               <span>Восстановление пароля</span>
+               <span id="errorMessage" style="visibility: hidden; color: red; font-size: 12px; margin-bottom: 0"></span>
+               <input type="text" id="email_login" placeholder="Введите email или логин аккаунта">
+               <button id="forgotBtn">Восстановить</button>
+            </div>
+         </div>
+      </div>
+      <div id="register-modal" class="modal">
+         <span class="close">×</span>
+         <div class="mod-f">
+            <div class="modal-content">
+               <span>Регистрация</span>
+               <span id="errorMessage" style="visibility: hidden; color: red; font-size: 12px; margin-bottom: 0"></span>
+               <input type="text" id="rlogin" placeholder="Придумайте ваш логин">
+               <input type="email" id="email" placeholder="Введите вашу эл. почту">
+               <input class="passwordReg" type="password" id="password" placeholder="Придумайте ваш пароль">
+
+               <input type="password" id="repassword" placeholder="Повторите ваш пароль">
+
+               <button id="regBtn">Зарегистрироваться</button>
+               <p>
+                  Регистрируясь, вы соглашаетесь с <a href="/licagree" class="lic-agree" target="_blank">лицензионным соглашением</a> и <a href="/privacy" class="lic-agree" target="_blank">политикой конфиденциальности
+                  </a>
+               </p>
+               <p><a class="login-button">Есть аккаунт? - Авторизируйтесь</a></p>
+            </div>
+         </div>
+      </div>
+      <section id="menu-wrapper-full" class="renewed">
+         <nav class="menu">
+            <ul class="menu-ul">
+            <li class="logo"><a href="/"><span>K<span class="color">L:</span>AUNCHER</span></a>
+            <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            </li><li class="menu-li"><a href="/">Главная</a></li>
+            <li class="menu-li"><a href="/news">Новости</a></li>
+            <li class="menu-li"><a href="/store">Магазин</a></li>
+            <li class="menu-li"><a href="/minecraft">Скачать Minecraft</a></li>
+            <li class="menu-li"><a href="/monitoring">Сервера Minecraft</a></li>
+            <li class="menu-li"><a href="/help">Помощь</a></li>
+            </ul>
+         </nav> 
+         <div class="container">
+            <div class="gl-wrapper">
+               <div class="gl-desc">
+               <h1>Майнкрафт лаунчер<br>нового поколения</h1>
+               <p>Все для игроков — безопасность, функционал и максимум простоты</p>
+               <button onclick="window.location.href = 'download1';"> Скачать </button>
+               </div>
+               <div class="gl-image selectDisable">
+                <img src="https://klauncher.ru/front-script/img/bee.webp" alt="Пчёлка">
+               </div>
+               <div class="gl-button">
+               <a class="reg register-button">Регистрация</a>
+               <a class="avt login-button">Авторизация</a>
+               </div>
+            </div>
+         </div>
+         <div class="div-mob-button">
+            <a href="#" class="reg-mob register-button">Регистрация</a>
+            <a href="#" class="avt-mob login-button">Авторизация</a>
+         </div>
+         <div class="pros flickity-enabled is-draggable" tabindex="0">
+
+            <div class="flickity-viewport" style="height: 344px; touch-action: pan-y;"><div class="flickity-slider" style="left: 0px; transform: translate3d(-0.64%, 0px, 0px);">
+               <div class="preim new" style="position: absolute; left: 0%;" aria-hidden="true">
+                  <div class="title">
+                     <h4>Система<br>достижений</h4>
+                     <img src="front-script/img/nag1.png" alt="">
+                  </div>
+                  <p>Играй в Minecraft используя KLauncher
+                  и получай награды, а после совершай покупки
+                  в «Магазине» на сайте или дари баллы в Мониторинге серверов!<br><br>Просмотреть достижения можно
+                  в личном кабинете</p>
+               </div>
+               <div class="preim new" style="position: absolute; left: 29%;" aria-hidden="true">
+                  <div class="title">
+                     <h4>Система скинов<br>
+                     и плащей KLAUNCHER</h4>
+                     <img src="front-script/img/nag2.png" alt="">
+                  </div>
+                  <p>В KLauncher можно установить свой собственный <b>скин или плащ</b> абсолютно бесплатно!<br>
+                     В базе содержится несколько десятков тысяч скинов и плащей на любой вкус
+                     <br><br>
+                     <a class="preim-btn" href="change-skin">Установить скин -&gt;</a>
+                  </p>
+               </div>
+               <div class="preim new is-selected" style="position: absolute; left: 58%;">
+                  <div class="title">
+                  <h4>Безопасность<br>
+                  и функционал</h4>
+                  <img src="front-script/img/nag3.png" alt="">
+                  </div>
+                  <p>KLauncher может запустить любую версию игры, в том числе Alpha/Snapshot/Optifine/Forge/Fabric
+                  <br><br>
+                  <b>А еще у нас есть настройка оформления!</b><br>
+                  Можно изменять цвет и фон в лаунчере на свой или выбрать из списка крутых готовых тем
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section id="how-game">
+         <div class="container">
+            <h3>
+               <img src="front-script/img/hg.png" alt="">
+               Как начать играть?
+            </h3>
+            <div class="how-play">
+               <div class="how-left">
+                  <img src="https://klauncher.ru/front-script/img/launcher-preview.webp" style="max-width: 600px">
+               </div>
+               <div class="how-center"><i class="fas fa-angle-right"></i></div>
+               <div class="how-right">
+                  <h4>Что нужно сделать, чтобы начать<br>играть через KLauncher?</h4>
+                  <p>
+                  -&gt; Оценить на изображении слева какой он прекрасный<br>
+                  -&gt; Нажать кнопку «Скачать»<br>
+                  -&gt; Следовать подсказкам в инсталляторе
+                  </p>
+                  <button onclick="window.location.href = 'download2';"> Скачать </button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="social">
+         <h3>
+            Мы в социальных сетях
+         </h3>
+         <div class="container">
+            <div class="social-block">
+               <div class="social-image">
+                  <a href="https://klaun.ch/vk" target="_blank">
+                  <img src="front-script/img/social-1.png" alt="">
+                  </a>
+               </div>
+               <div class="social-desc">
+                  <a href="https://klaun.ch/vk" target="_blank">
+                  <h6>Официальное сообщество</h6>
+
+                  </a>
+               </div>
+            </div>
+            <div class="social-block">
+               <div class="social-image">
+                  <a href="https://klaun.ch/youtube" target="_blank">
+                  <img src="front-script/img/social-2.png" alt="">
+                  </a>
+               </div>
+               <div class="social-desc">
+                  <a href="https://klaun.ch/youtube" target="_blank">
+                  <h6>Официальный канал</h6>
+
+                  </a>
+               </div>
+            </div>
+            <div class="social-block">
+               <div class="social-image">
+                  <a href="https://klaun.ch/telegram" target="_blank">
+                  <img src="front-script/img/social-3.png" alt="">
+                  </a>
+               </div>
+               <div class="social-desc">
+                  <a href="https://klaun.ch/telegram" target="_blank">
+                     <h6>Официальный канал</h6>
+                  </a>
+               </div>
+            </div>
+            <div class="social-block">
+               <div class="social-image">
+                  <a href="https://klaun.ch/discord" target="_blank">
+                  <img src="front-script/img/social-4.png" alt="">
+                  </a>
+               </div>
+               <div class="social-desc">
+                  <a href="https://klaun.ch/discord" target="_blank">
+                  <h6>Официальный канал</h6>
+
+                  </a>
+               </div>
+            </div>
+         </div>
+   </section>
+   <footer>
+      <div class="container">
+         <div class="desc-footer">
+            <h6>KL:AUNCHER</h6>
+            <p>Лаунчер нового поколения, созданный для приятной игры и полной безопасности игроков которые его используют</p>
+            <p>Скачивая и устанавливая наше программное обеспечение, вы принимаете условия
+            <b><a href="/licagree">Лицензионного соглашения</a></b>
+            и
+            <b><a href="/privacy">Политики конфиденциальности</a></b>
+            </p>
+            <p>© KLauncher LLC 2021</p>
+         </div>
+      <div class="link-footer">
+         <h6>Навигация</h6>
+         <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/news">Новости</a></li>
+            <li><a href="/store">Магазин</a></li>
+            <li><a href="/minecraft">Скачать Minecraft</a></li>
+            <li><a href="/monitoring">Сервера Minecraft</a></li>
+            <li><a href="/help">Помощь</a></li>
+            <li><a href="/licagree">Лицензионное соглашение</a></li>
+            <li><a href="/privacy">Политика конфиденциальности</a></li>
+         </ul>
+         </div>
+      </div>
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" type="text/javascript"></script>
+   <script src="https://klauncher.ru/front-script/js/dl-modal.js" type="text/javascript"></script>
+   <script src="https://klauncher.ru/front-script/js/main.js" type="text/javascript"></script>
+   <script src="https://klauncher.ru/front-script/js/actions.js" type="text/javascript"></script>
+   <script type="text/javascript">
+        var carousel = new Flickity('.pros', {
+            cellAlign: 'center',
+            initialIndex: 1,
+            prevNextButtons: false,
+            setGallerySize: true,
+            pageDots: false
+        });
+
+        carousel.on('staticClick', function(event, pointer, cellElement, cellIndex) {
+            carousel.select(cellIndex);
+        });
+
+
+        var currentSlider = 1; 
+        setInterval(() => {
+            currentSlider++;
+            if(currentSlider > 2) currentSlider = 0;
+
+            carousel.select(currentSlider);
+        }, 4000);
+
+    </script>
+
+</html>
